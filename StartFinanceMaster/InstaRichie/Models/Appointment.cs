@@ -12,7 +12,7 @@ namespace StartFinance.Models
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
-        [Unique, NotNull]
+        [NotNull]
         public string AptmtName { get; set; }
 
         public string AptmtDesc { get; set; }
@@ -21,13 +21,13 @@ namespace StartFinance.Models
         public string Location { get; set; }
 
         [NotNull]
-        public DateTime AptmnDate { get; set; }
+        public string AptmtDate { get; set; }
 
         [NotNull]
-        public DateTime StartTime { get; set; }
+        public string StartTime { get; set; }
 
         [NotNull]
-        public DateTime EndTime { get; set; }
+        public string EndTime { get; set; }
 
         
     }

@@ -78,7 +78,7 @@
 
             <!--  secondary commands  -->
             <controls:PageHeader.PrimaryCommands>
-                <AppBarButton Icon="Add" Label="Add Account" Click="add_aptmn_btn_click" />
+                <AppBarButton Icon="Add" Label="Add Account" Click="add_aptmn_btn_click"/>
                 <AppBarButton Icon="Delete" Label="Delete Account" Click="delete_aptmn_btn_click"/>
             </controls:PageHeader.PrimaryCommands>
         </controls:PageHeader>
@@ -97,12 +97,12 @@
                         HorizontalAlignment="Stretch"
                         Orientation="Vertical" Margin="10,5,10,0">
                         <TextBox x:Name="EventName" Header="Event Name" PlaceholderText="Name Your event" TextWrapping="Wrap"/>
-                        <TextBox x:Name="EventDescription" Header="Enter a Description" PlaceholderText="Adelaide" TextWrapping="Wrap"/>
+                        <TextBox x:Name="EventDescription" Header="Enter a Description" PlaceholderText="Write your description here" TextWrapping="Wrap"/>
                         <TextBox x:Name="Location" Header="Enter a Location" PlaceholderText="Adelaide" TextWrapping="Wrap"/>
                         <CalendarDatePicker x:Name="EventDate" Header="Choose a date for your event"
                                        VerticalAlignment="Stretch"/>
-                        <TimePicker x:Name="StartTime" Height="100" Width="100" Time="00:00" Header="Select the Event Start Time"/>
-                        <TimePicker x:Name="EndTime" Height="100" Width="100" Time="00:00" Header="Select the Event End Time"/>
+                        <TimePicker x:Name="EventStartTime"  Width="100" ClockIdentifier="12HourClock"  Time="00:00" Header="Select the Event Start Time"/>
+                        <TimePicker x:Name="EventEndTime" Width="100"  Time="00:00" Header="Select the Event End Time"/>
 
                     </StackPanel>
                     <ListView x:Name="AppointmentList" Grid.Row="1" ItemTemplate="{StaticResource AppointmentListView}"
