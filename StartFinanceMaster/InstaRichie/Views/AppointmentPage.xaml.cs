@@ -41,6 +41,7 @@ namespace StartFinance.Views
             Results();
         }
 
+        // gets a list of appointment from the database
         public void Results()
         {
             // Creating table
@@ -131,8 +132,36 @@ namespace StartFinance.Views
             }
         }
 
-        private void delete_aptmn_btn_click(object sender, RoutedEventArgs e)
+        private async void delete_aptmn_btn_click(object sender, RoutedEventArgs e)
         {
+            MessageDialog ShowConf = new MessageDialog("Are you sure to delete this Appointment", "Important");
+            ShowConf.Commands.Add(new UICommand("Yes, Delete")
+            {
+                Id = 0
+            });
+            ShowConf.Commands.Add(new UICommand("Cancel")
+            {
+                Id = 1
+            });
+            ShowConf.DefaultCommandIndex = 0;
+            ShowConf.CancelCommandIndex = 1;
+
+            var result = await ShowConf.ShowAsync();
+            if ((int)result.Id == 0)
+            {
+                try
+                {
+                    int aptmtID = ((Appointment)AppointmentList.SelectedItem).ID;
+                    var querydel = conn.Query<Appointment>("DELETE FROM Appointment WHERE ID='" + aptmtID + "'");
+                    Results();
+
+                }
+                catch (NullReferenceException)
+                {
+                    MessageDialog ClearDialog = new MessageDialog("Please select the item to Delete", "Oops..!");
+                    await ClearDialog.ShowAsync();
+                }
+            }
 
         }
     }
