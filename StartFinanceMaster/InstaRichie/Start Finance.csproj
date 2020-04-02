@@ -118,6 +118,9 @@
     <Compile Include="Views\AccountsPage.xaml.cs">
       <DependentUpon>AccountsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AppointmenDetailsPage.xaml.cs">
+      <DependentUpon>AppointmenDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AppointmentPage.xaml.cs">
       <DependentUpon>AppointmentPage.xaml</DependentUpon>
     </Compile>
@@ -164,6 +167,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\update_icon.png" />
     <Content Include="Help.htm" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -187,6 +191,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="Views\AccountsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppointmenDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

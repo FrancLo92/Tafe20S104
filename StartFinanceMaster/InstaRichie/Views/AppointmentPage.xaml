@@ -79,6 +79,11 @@
             <!--  secondary commands  -->
             <controls:PageHeader.PrimaryCommands>
                 <AppBarButton Icon="Add" Label="Add Account" Click="add_aptmn_btn_click"/>
+                <AppBarButton  Label="Delete Account" Click="update_aptmn_btn_click"  >
+                    <AppBarButton.Icon>
+                        <BitmapIcon UriSource="ms-appx:///Assets/update_icon.png"/>
+                    </AppBarButton.Icon>
+                </AppBarButton>
                 <AppBarButton Icon="Delete" Label="Delete Account" Click="delete_aptmn_btn_click"/>
             </controls:PageHeader.PrimaryCommands>
         </controls:PageHeader>
