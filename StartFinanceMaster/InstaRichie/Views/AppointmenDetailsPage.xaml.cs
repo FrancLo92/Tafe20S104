@@ -47,7 +47,7 @@ namespace StartFinance.Views
             EventName.Text = aptmtObj.AptmtName;
             EventDescription.Text = aptmtObj.AptmtDesc;
             Location.Text = aptmtObj.AptmtDesc;
-            DateTime evDate = Convert.ToDateTime(aptmtObj.AptmtDate);            
+            DateTime evDate = Convert.ToDateTime(aptmtObj.AptmtDate);
             EventDate.Date = evDate;
             EventStartTime.Time = DateTime.Parse(aptmtObj.StartTime).TimeOfDay;
             EventEndTime.Time = DateTime.Parse(aptmtObj.EndTime).TimeOfDay;
