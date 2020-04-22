@@ -108,6 +108,7 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ContactDetails.cs" />
     <Compile Include="Models\Debt.cs" />
+    <Compile Include="Models\PersonalInfo.cs" />
     <Compile Include="Models\Transactions.cs" />
     <Compile Include="Models\WishList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,6 +158,9 @@
     </Compile>
     <Compile Include="Views\TransactionListPage.xaml.cs">
       <DependentUpon>TransactionListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PersonalInfoPage.xaml.cs">
+      <DependentUpon>PersonalInfoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TransactionPage.xaml.cs">
       <DependentUpon>TransactionPage.xaml</DependentUpon>
@@ -249,6 +253,10 @@
     <Page Include="Views\TransactionListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PersonalInfoPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\TransactionPage.xaml">
       <SubType>Designer</SubType>
